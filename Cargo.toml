@@ -1,0 +1,26 @@
+[workspace]
+members = [
+    "crates/doubao-core",
+    "crates/doubao-api",
+    "crates/doubao-cli",
+]
+resolver = "2"
+
+[workspace.package]
+version     = "0.1.0"
+edition     = "2021"
+authors     = ["Doubao Claw Contributors"]
+license     = "MIT"
+repository  = "https://github.com/yourusername/doubao-claw"
+
+[workspace.dependencies]
+tokio        = { version = "1",     features = ["full"] }
+serde        = { version = "1",     features = ["derive"] }
+serde_json   = "1"
+reqwest      = { version = "0.11",  features = ["json", "stream"] }
+futures      = "0.3"
+anyhow       = "1"
+thiserror    = "1"
+async-stream = "0.3"
+tokio-stream = "0.1"
+tracing      = "0.1"
